@@ -19,6 +19,7 @@ export class SwitchesPage {
   });
 
   onSubmit() {
+    /* Marca todos los campos como tocados para mostrar errores */
     this.myForm.markAllAsTouched();
   }
  }

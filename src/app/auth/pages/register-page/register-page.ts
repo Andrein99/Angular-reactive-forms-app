@@ -38,6 +38,7 @@ export class RegisterPage {
   // }
 
   onSubmit() {
+    // Marcar todos los campos como tocados para mostrar errores
     this.myForm.markAllAsTouched();
   }
 }

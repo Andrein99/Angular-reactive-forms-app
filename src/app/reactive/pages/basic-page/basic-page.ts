@@ -50,6 +50,10 @@ export class BasicPage {
   // }
 
   onSave() {
+    /* Maneja el evento de guardado del formulario. Si el formulario es inválido,
+       marca todos los campos como tocados para mostrar los errores de validación.
+       Si es válido, resetea el formulario.
+    */
     if (this.myForm.invalid) {
       this.myForm.markAllAsTouched();
       return;

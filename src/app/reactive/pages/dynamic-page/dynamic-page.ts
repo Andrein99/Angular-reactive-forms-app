@@ -26,10 +26,12 @@ export class DynamicPage {
   newFavorite = new FormControl('', Validators.required);
 
   get favoriteGames() {
+    // This cast is safe because we know the structure of the form
     return this.myForm.get('favoriteGames') as FormArray;
   }
 
   onAddToFavorites() {
+    /* Validamos el nuevo juego */
     if (this.newFavorite.invalid) return;
     const newGame = this.newFavorite.value;
 
@@ -38,10 +40,12 @@ export class DynamicPage {
   }
 
   onDeleteFavorite(index: number) {
+    /* Elimina el juego en la posición index */
     this.favoriteGames.removeAt(index);
   }
 
   onSubmit() {
+    /* Marca todos los campos como tocados para mostrar errores */
     this.myForm.markAllAsTouched();
   }
  }
